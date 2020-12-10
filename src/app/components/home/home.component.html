@@ -1,5 +1,9 @@
+<div class="title" style="height: 5vh; text-align: center; display: flex; justify-content: center; align-items: center; width: 100%;">
+    <h1>TOP 10 SONGS</h1>
+</div>
 <div class="card-columns">
-    <div *ngFor="let cancion of nuevasCanciones" class="card">
+    <div *ngFor="let cancion of nuevasCanciones; index as i" class="card">
+        <span style="color: black; font-size: 3vh; font-weight: 500;">TOP {{i+1}}</span>
         <img class="card-img-top" src="{{cancion.images[0].url}}" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">{{cancion.name}}</h5>
